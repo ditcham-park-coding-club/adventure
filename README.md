@@ -9,3 +9,6 @@ Console-based adventure game built by the Coding Club!
 1. You will be told what you can do. Each possible instruction is a _function_ that you can type into the Console.
    * You must also add a pair of brackets, like this: `goNorth()`
    * then, press **Enter**
+
+## Technical
+`imageOptim -a -d .`
