@@ -6,42 +6,22 @@ In front of you is a polar bear in a strange cage.
 <div>
   <img src="icebear.png" width="200"
    title="http://jadensadventures.wikia.com/wiki/File:Ice_bear_we_bare_bears_s01e07_by_djdavid98-d9kgsiy.png"></img>
-  <img id="cage" src="cage.svg" width="200" style="position: absolute; left: 0;"></img>
+  <img src="cage.svg" width="200" style="position: absolute; left: 0;"></img>
 </div>
-<p id="escape" hidden="true">
-  He says, "I need magic ukelele strings to escape."
-</p>
-<p id="wontWork" hidden="true">
-  "That won't work."
+<p id="bearSaysHi" hidden="true">
+  "Hi! I need ukulele strings!"
 </p>
 <script>
-have = ["Rucksack", "Fluff"];
 console.log('Welcome to Georges home!');
-console.log('You have: ' + have);
-console.log('You can: goNorth(), say("<something>"), breakCage(), drop("<something>")');
+console.log('You can: goNorth(), say("<something>")');
 goNorth = function () {
   window.location = '../miles/north east 1.html';
-}
+};
 say = function (what) {
-  document.getElementById('wontWork').hidden = true;
-  document.getElementById('escape').hidden = false;
-  return what;
-}
-breakCage = function () {
-  document.getElementById('cage').hidden = true;
-  setTimeout(function () {
-    document.getElementById('cage').hidden = false;
-    document.getElementById('wontWork').hidden = false;
-  }, 1000);
-}
-drop = function (thing) {
-  var index = have.indexOf(thing);
-  if (index == -1) {
-    return "You don't have a " + thing;
-  } else {
-    have.splice(index, 1);
-    return 'You have: ' + have;
+  if (what == 'Hi') {
+    document.getElementById('bearSaysHi').hidden = false;
+    console.log("Now you can: openTheCage()");
   }
-}
+};
 </script>
 </html>

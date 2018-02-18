@@ -1,33 +1,35 @@
 <html>
-<font face="Century Gothic" size= "30px">
+<font face="Century Gothic">
   Ooh, well done, you just got eight ukulele strings!!! Way to go man!!
   <p> </p>
-In front of you is a penguin telling you that he needs money.
+But you have to spend them cos....
 
-But you can only give him anchovies.
-<p> </p>
-NB: Penguins <i>hate</i> anchovies!
-<p> </p>
-SO DON'T GIVE HIM ANY!
-
-COS HE MIGHT STRANGLE YOU IN YOUR SLEEP!
-<p> </p>
-<i>However, he does like cod, so if you happen to grab any on your way back he would be much delighted.</i>
  <p> </p>
+ There's a penguin wanting some anchovies to your left.
+<p> </p>
+ Will you choose to give him your 8 ukulele strings so he can buy some?
+ <p-> </p>
+ Or will you choose to ignore him?
+<p> </p>
  <img src="penguin.jpg" width="500"></img>
+ <p> </p>
+ <p id="penguinSaysGimmeGimmeGimme" hidden="true">
+  "Hey you! Gimme your anchovies! Or prepare to face death!!!"
+</p>
 <script>
-console.log('Hi Loser! You are in the frozen north, and about to freeze your toes off.');
-console.log('You can goWest, or goSouth, or even goEast. But NOT goNorth.')
-goWest = function () {
-  window.location = '../ukulele/guinea pig rain.html';
+console.log('So what are you going to do?');
+console.log('You can ignoreThePenguin, or say("<something>") like 'Hi'.')
+ignoreThePenguin = function () {
+  window.location = '../george/home.html';
 }
-goEast = function () {
-  window.location = '../AbiJas/home.html';
-}
-goSouth = function () {
-  window.location = '../miles/north east 1.html';
-}
-//I would like to be able to count up how many ukulele strings you have.
+
+say = function (what) {
+  if (what == 'Hi') {
+  document.getElementById('penguinSaysGimmeGimmeGimme').hidden = false;
+  }
+};
+  console.log("After that you can: give the anchovies by saying ('Here you go Mr. Penguin.')")
+
 </script>
 </font>
 </html>
