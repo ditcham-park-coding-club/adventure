@@ -1,26 +1,42 @@
 <html>
-In front of you is a sloth hanging from a tree.
-
-<b>He is sleeping.</b>
+<b> In front of you is a sloth hanging in a tree. </b>
+<s>
+</s>
+<P>
+  You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck!
 <p>
-<img src="Sloth asleep.jpg" height="200"></img>
-<p id= "slothWakesUp" hidden="false">
-Will you wake him up? You have 2 options: yes or no.
+<img id="sloth" src="Sloth asleep.jpg" height="200"></img>
+<p id= "slothWakesUp" hidden="true">
+oh. He seems to be asleep. Will you wake him up? You have 2 options: yes or no.
 </p>
 <script>
-console.log('You have 5 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck!');
+console.log('You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck! Say Hi to him.');
 console.log('You can use Yes() or No()')
-goNorth = function () {
-  window.location = '../ukulele/guinea pig rain.html' ;
+go = function (where) {
+  window.location = where;
+};
   document.getElementById("BearSaysHi");
   paragraph.hidden = false;
-  Yes= function ()
+//make Mr. sloth say wise information for yes and nothing for no
 };
-// Make the sloth awake and have a conversation with him
+north = '../miles/north east 1.html'
+east = '../AbiJas/home.html'
+west = '../george/home.html'
+south = '../ukulele/guinea pig rain.html'
+home = '../IssyElsa/home.html'
 sayHi= function () {
-  document.getElementById('bearSaysHi').hidden=false;
+  document.getElementById('slothWakesUp').hidden=false;
+
 };
+yes= function () {
+  document.getElementById('slothWakesUp').hidden=false;
+};
+no= function () {
+  document.getElementById('slothWakesUp').hidden=false;
+};
+// I have added an id to the img (see <img id="sloth" src="Sloth asleep.jpg" height="200"></img>)
+// If you want to change the sloth img, do something like this:
+// document.getElementById('sloth').src = something
+document.getElementById('sloth').src = <img id="sloth awake" src="sloth awake.jpg" height="200" ><img>
 </script>
 </html>
-//Add the sloth waking up and giving you info.sssss
-//User can reply yes or nosss

@@ -1,34 +1,48 @@
 <html>
 <font face="Century Gothic">
-  Ooh, well done, you just got eight ukulele strings!!! Way to go man!!
+  Ooh, well done, you just got a ukulele string!!! Way to go man!!
   <p> </p>
 But you have to spend them cos....
 
  <p> </p>
  There's a penguin wanting some anchovies to your left.
 <p> </p>
- Will you choose to give him your 8 ukulele strings so he can buy some?
+ Will you choose to give him your ukulele string so he can buy some?
  <p-> </p>
  Or will you choose to ignore him?
 <p> </p>
- <img src="penguin.jpg" width="500"></img>
+ <img id="PENGUIN" src="penguin.jpg" width="500"></img>
  <p> </p>
  <p id="penguinSaysGimmeGimmeGimme" hidden="true">
   "Hey you! Gimme your anchovies! Or prepare to face death!!!"
+
+
+  <p id="penguinSaysThanks" hidden ="true">
+    Aw, thanks. You shoudn't have. Youre way too kind.
 </p>
 <script>
 console.log('So what are you going to do?');
-console.log('You can ignoreThePenguin, or say("<something>") like 'Hi'.')
+console.log('You can ignoreThePenguin, or say("<something>") like "Hi".');
 ignoreThePenguin = function () {
   window.location = '../george/home.html';
 }
 
 say = function (what) {
-  if (what == 'Hi') {
+  if (what == "Hi")
   document.getElementById('penguinSaysGimmeGimmeGimme').hidden = false;
-  }
+  document.getElementById('PENGUIN').src="penguin angry.jpg";
+  console.log("Look at the penguin now! After that you can: give the ukulele string you just recieved by typing respond('Here you go Mr Penguin')")
+  console.log("Or you could respond Bye bye")
+  if (what == "Bye bye")
+  window.location = '../AbiJas/home.html';
+}
+
+respond = function (what) {
+  if (what == 'Here you go Mr Penguin')
+  document.getElementById("penguinSaysThanks").hidden = false;
+  console.log("Look at the penguin again and see what he says.")
+  console.log("You just made a grave mistake my friend. He will only spend it on BOWLING BALLS! Now you have to ignoreThePenguin and carry on your way.")
 };
-  console.log("After that you can: give the anchovies by saying ('Here you go Mr. Penguin.')")
 
 </script>
 </font>
