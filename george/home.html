@@ -15,6 +15,7 @@ In front of you is a polar bear in a strange cage.
   "Hi! I need four ukulele strings to escape!
   Can you find some for me?"
 </p>
+<script src='../player.js'></script>
 <script>
 north = '../miles/north east 1.html';
 east = '../IssyElsa/home.html';
@@ -22,11 +23,18 @@ west = '../AbiJas/home.html';
 south = '../ukulele/guinea pig rain.html';
 home = '../george/home.html';
 
+console.log('You have: ' + have);
 console.log('Welcome to Georges home!');
-console.log('You can: go(north/east/west/south), say("<something>")');
+console.log('You can: go(north/east/west/south), say("something")');
+console.log('Here is a carrot');
 
-go = function (where) {
-  window.location = where;
+pickUp = function (awesomeness) {
+  if (awesomeness == 'carrot') {
+    have.push(awesomeness);
+  } else if (awesomeness == 'ukelele string') {
+    have.push(awesomeness);
+  }
+  console.log('You have: ' + have);
 };
 
 say = function (what) {

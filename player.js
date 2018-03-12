@@ -1,5 +1,8 @@
-player = {
-  have : ['water bottle', 'bag']
-};
+var loc = window.location.href, qMarkIndex = loc.indexOf('?');
 
-console.log('You have: ' + player.have);
+have = qMarkIndex > -1 && qMarkIndex < loc.length - 1 ?
+  loc.substring(qMarkIndex + 1).split('&').map(decodeURIComponent) : [];
+
+function go(loc) {
+  window.location.href = loc + '?' + have.map(encodeURIComponent).join('&');
+}

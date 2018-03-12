@@ -5,25 +5,29 @@ bow or sword
 <p id="useBow" hidden="true"> the bow hits the raider weeakening his leg. he
   screams out then limps towards you with his giant club you fie again hitting
   him in the forehead sending him crashing to the floor
-  you search the body to find a ukele string lieing on the body 
+  you search the body to find a ukele string lieing on the body
 
 </head>
 </p>
 
-
 <script>
+have=[];
+console.log('you have ' + have)
   console.log("useBow ");
   console.log("useSword ");
-  useBow=function () {
-    document.getElementById("useBow").hidden=false;
-    console.log("goHome");
-    goHome= function () {
-      window.location='../george/home.html';
-    }
+
+useBow=function () {
+  have.push("NorthanUkaleString");
+  console.log('you have ' + have);
+  document.getElementById("useBow").hidden=false;
+  console.log("goHome");
+  goHome= function () {
+    window.location='../george/home.html';
   }
-  useSword= function () {
-    window.location= "Sword.Html"
-  }
+}
+useSword= function () {
+  window.location= "Sword.Html"
+}
 </script>
 
 </Html>
