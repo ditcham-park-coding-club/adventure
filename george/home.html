@@ -14,9 +14,9 @@ In front of you is a polar bear in a strange cage.
 <p id="bearSaysHi" hidden="true">
   "Hi! I need four ukulele strings to escape!
   Can you find some for me?"
-</p hidden>
+</p>
+<p id="theEnd" hidden="true">
   The polar bear says "Thanks!"and then eats you.
-<p>
 </p>
 <script src="../player.js"></script>
 <script>
@@ -27,23 +27,12 @@ south = '../ukulele/guinea pig rain.html';
 home = '../george/home.html';
 
 console.log('Welcome to Georges home!');
-console.log('You can: go(north/east/west/south), say("<something>")');
 console.log('Here is a carrot');
-
-pickUp = function (what) {
-  if (what == 'carrot') {
-    have.push(what);
-  } else if (what == 'ukelele string') {
-    have.push(what);
-  }
-  console.log('You have: ' + have);
-};
+here = ["carrot"];
 
 say = function (what) {
   if (what.toLowerCase().startsWith("h")) {
     document.getElementById('bearSaysHi').hidden = false;
-    console.log("Now you can: " +
-     "openTheCage()");
   } else {
     document.getElementById('bearSaysNothing').hidden = false;
   }
