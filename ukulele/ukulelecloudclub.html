@@ -1,10 +1,8 @@
 <html>
-<font face="Century Gothic">
-  Ooh, well done, you just got a ukulele string!!! Way to go man!!
-  <p> </p>
-But you have to spend them cos....
+<font face="Century">
 
- <p> </p>
+
+
  There's a penguin wanting some anchovies to your left.
 <p> </p>
  Will you choose to give him your ukulele string so he can buy some?
@@ -16,31 +14,37 @@ But you have to spend them cos....
 
 
 
-  <p id="penguinSaysThanks" hidden ="true">
+<p id="penguinSaysThanks" hidden ="true">
     Aw, thanks. You shoudn't have. Youre way too kind.
 </p>
+<script src= "../player.js"> </script>
 <script>
-have = ['1 ukulele string!', 'some out-of-date anchovies    '];
-console.log('You have: ' + have + 'You can pickUp something that will help you along the way. i.e. a magic apple');
+
 console.log('So what are you going to do?');
 console.log('You can ignoreThePenguin, or say("<something>") like "Hi".');
+console.log('Oh! And you can pickUp something, and there is a ukuele string on the floor.')
+
 ignoreThePenguin = function () {
-  window.location = '../george/home.html';
+  window.location = '../AbiJas/home.html';
 }
-have = ['1 ukulele string', 'some out-of-date anchovies'];
+
+
+
 say = function (what) {
   if (what == "Hi")
   document.getElementById('PENGUIN').src="penguin angry.jpg";
-  console.log("Look at the penguin now! After that you can: give the ukulele string you just recieved by typing respond('Here you go Mr Penguin')")
+  console.log("Look at the penguin now! After that you can: give a ukulele string you just recieved by typing respond('Here you go Mr Penguin')")
   console.log("Or you could respond Bye bye")
   if (what == "Bye bye")
   window.location = '../AbiJas/home.html';
 }
-have = ['1 ukulele string', 'some out-of-date anchovies  '];
+
+
 pickUp = function (awesomeness) {
-  if (awesomeness == 'magic apple')
+  if (awesomeness == 'ukulele string')
     have.push(awesomeness);
-  console.log('You have ' + have + '.    Now what about that penguin? He seems to be blocking your way. ')
+  console.log('You have: ' + have)
+
 }
 
 respond = function (what) {
@@ -48,7 +52,7 @@ respond = function (what) {
   document.getElementById("penguinSaysThanks").hidden = false;
   document.getElementById("PENGUIN").src="penguin.jpg";
   console.log("Look at the penguin again and see what he says.")
-  console.log("You just made a grave mistake my friend. He will only spend it on BOWLING BALLS! Now you have to ignoreThePenguin and carry on your way.")
+  console.log("You just made a grave mistake my friend. He will only spend the ukulele string on bowling balls!! Now you have to ignoreThePenguin and carry on your way.")
 };
 
 

@@ -23,13 +23,13 @@ You must find the magic carrot, the magic apple and the magic lettice leaf!
     we will help you defeat the mushroom and give you two ukelele strings!"
   </p>
   <p style="background: grey;">
-    <!-- Could you help us do the pickUp, it is not working at the moment, please (by Jasmine)! -->
     <img src="Apple.jpg" width="200"></img>
     <img src="Lettuce.jpg" width="200"></img>
     <img src="Carrot3.jpg" width="200"></img>
   </p>
 </div>
 <img src="MUSHROOM.jpg" width="500"></img>
+<script src="../player.js"></script>
 <script>
 north = '../miles/north east 1.html';
 east = '../IssyElsa/home.html';
@@ -37,24 +37,20 @@ west = '../AbiJas/home.html';
 south = '../ukulele/guinea pig rain.html';
 home = '../george/home.html';
 
-have = [];
 
-console.log('You have: ' + have);
 console.log('Welcome to AbiJas home!!');
 console.log('You can go(north/east/west/south/home) or sayHi()');
 
-go = function (where) {
-  window.location = where;
-};
 
 pickUp = function (what) {
-  if (what=='carrot') {
+  if (have.indexOf(what) > -1) {
+    console.log('What ' + what + '?');
+  } else if (what=='carrot') {
     have.push(what);
   } else if (what=='apple') {
     have.push(what);
-  }
-    else if (what=='lettuce') {
-      have.push(what);
+  } else if (what=='lettuce') {
+    have.push(what);
   }
   console.log('You have: ' + have);
 };

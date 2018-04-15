@@ -6,3 +6,5 @@ have = qMarkIndex > -1 && qMarkIndex < loc.length - 1 ?
 function go(loc) {
   window.location.href = loc + '?' + have.map(encodeURIComponent).join('&');
 }
+
+console.log('You have: ' + have);

@@ -4,17 +4,16 @@
 </s>
 <P>
   You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck! say Hi to him.
-<p>
+</p>
 <img id="sloth" src="Sloth asleep.jpg" height="200"></img>
 <p id= "slothWakesUp" hidden="true">
 oh. He seems to be asleep. Will you wake him up? You have 2 options: yes or no.
 </p>
+<script src="..?player.js"></script>
 <script>
-console.log('You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck! Say Hi to him.');
-console.log('You can use Yes() or No()')
-go = function (where) {
-  window.location = where;
-};
+console.log('You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck! Say Hi to him. sayHi()');
+//console.log('You can use Yes() or No()')
+
 //make Mr. sloth say wise information for yes and nothing for no
 north = '../miles/north east 1.html'
 east = '../AbiJas/home.html'
@@ -24,16 +23,17 @@ home = '../IssyElsa/home.html'
 sayHi= function () {
   //document.getElementById('slothWakesUp').hidden=false;
   //document.getElementById('sloth').src = 'Sloth awake.jpg';
+  console.log('You can use Yes() or No()')
 };
 yes= function () {
   document.getElementById('slothWakesUp').hidden=false;
   document.getElementById('sloth').src = 'Sloth awake.jpg';
+
+document.getElementarybyId('Sloth asleep.jpg').hidden=true;
 };
 no= function () {
   document.getElementById('slothWakesUp').hidden=false;
 };
 // I have added an id to the img (see <img id="sloth" src="Sloth asleep.jpg" height="200"></img>)
-// If you want to change the sloth img, do something like this:
-// document.getElementById('sloth').src = something
 </script>
 </html>
