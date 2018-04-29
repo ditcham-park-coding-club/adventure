@@ -25,6 +25,7 @@
 <script src= "../player.js"> </script>
 <script>
 
+console.log('There is a ukelele string here.');
 console.log('So what are you going to do?');
 console.log('You can ignoreThePenguin(), or say("<something>") like "Hi".');
 
@@ -39,7 +40,7 @@ say = function (what) {
   if (what == "Hi") {
     document.getElementById('PENGUIN').src="penguin angry.jpg";
     console.log("Look at the penguin now! After that you can: give a ukelele string you just recieved by typing drop('ukelele string') that is, if you have one")
-    console.log("Or you could respond('Bye bye')")
+    console.log("Or you could respondByeBye()")
   }
   if (what == "Bye bye") {
     go('../george/home.html');
