@@ -12,6 +12,7 @@ Console-based adventure game built by the Coding Club!
    * then, press **Enter**
 
 _Hint:_ If you mess up or die, use the Back button in the browser to try again.
+
 _Hint:_ Javascript is _case sensitive_. You have to use the correct lowercase and uppercase letters.
 
 ## Technical
