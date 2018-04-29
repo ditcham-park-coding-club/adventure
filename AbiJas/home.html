@@ -20,7 +20,7 @@ You must find the magic carrot, the magic apple and the magic lettuce leaf!
   <p>
     "We know that you need to collect ukelele strings, so if you give us the
     magic carrot, the magic apple and the magic lettuce leaf
-    we will help you defeat the mushroom and give you two ukelele strings!"
+    we will help you defeat the mushroom and give you a ukelele string!"
   </p>
   <p style="background: grey;">
     <img src="Apple.jpg" width="250"></img>
@@ -32,25 +32,18 @@ You must find the magic carrot, the magic apple and the magic lettuce leaf!
 <script src="../player.js"></script>
 <script>
 north = '../miles/north east 1.html';
-east = '../IssyElsa/home.html';
-west = '../AbiJas/home.html';
+east = '../george/home.html';
+west = '../IssyElsa/home.html';
 south = '../ukulele/guinea pig rain.html';
-home = '../george/home.html';
-
 
 console.log('Welcome to AbiJas home!!');
-console.log('You can go(north/east/west/south/home) or sayHi()');
+console.log('You can sayHi()');
 
 giveAll = function () {
   if (have.indexOf('carrot') > -1 && have.indexOf('lettuce') > -1 && have.indexOf('apple') > -1) {
     // now we want to drop the vegetables
-    drop('carrot');
-    drop('lettuce');
-    drop('apple');
-
     have.push('ukelele string');
-    have.push('ukelele string');
-    console.log('You have ' + have);
+    drop('carrot', 'lettuce', 'apple');
   }
 }
 

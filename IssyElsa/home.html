@@ -2,24 +2,24 @@
 <b> In front of you is a sloth hanging in a tree. </b>
 <s>
 </s>
-<P>
+<p>
    You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth and you may find a uklele string. Try your luck! say Hi to him.
 </p>
 <img id="sloth" src="Sloth asleep.jpg" height="200"></img>
 <p id= "slothWakesUp" hidden="true">
-<b>Narator:</b> oh. He seems to be asleep. Will you wake him up? You have 2 options: yes or no.
+<b>Narrator:</b> oh. He seems to be asleep. Will you wake him up? You have 2 options: yes or no.
 </p>
 <p id= "WiseInfo" hidden="true">
 *yawn* Hello there! what would you like?
-In the mountains don't run, fight, BE BRAVE! Then take the bow. In the savana, don't OVER THINK it, simplicity is KEY. Now I have given you the wise infomation, you must repay me in uklele strings. One will do.
+In the mountains don't run, fight, BE BRAVE! Then take the bow. In the savana, don't OVER THINK it, simplicity is KEY. Now I have given you the wise infomation, you must repay me in ukelele strings. One will do.
 </p>
 <p>
 <p id="no" hidden="true">
-<b> Narator: </b> You look around and see a ukelele string on the floor.
+<b> Narrator: </b> You look around and see a ukelele string on the floor.
 </p>
 <script src="../player.js"></script>
 <script>
-console.log('You have 2 more ukulele strings. You can wake Mr Sloth for 1 ukulele string and he will give you some wise infomation or you can choose to let him sleep, he will be a happier Mr Sloth, and try your luck! Say Hi to him. sayHi()');
+console.log('You can sayHi()');
 
 //hi
 //make Mr. sloth say wise information for yes and nothing for no
@@ -27,24 +27,26 @@ north = '../miles/north east 1.html'
 east = '../AbiJas/home.html'
 west = '../george/home.html'
 south = '../ukulele/guinea pig rain.html'
-home = '../IssyElsa/home.html'
+
 sayHi= function () {
   document.getElementById('slothWakesUp').hidden=false;
   //document.getElementById('sloth').src = 'Sloth awake.jpg';
-  console.log('Narator: oh. He seems to be asleep. Will you wake him up? You have 2 options: yes() or no().')
-};
-yes = function () {
-  document.getElementById('slothWakesUp').hidden=true;
-  document.getElementById('sloth').src = 'Sloth awake.jpg';
-  document.getElementById('WiseInfo').hidden=false;
-  //document.getElementarybyId('Sloth asleep.jpg').hidden=true;
-};
-no = function () {
-  document.getElementById('slothWakesUp').hidden=false;
-  document.getElementById('no').hidden=false
-console.log( Narator: You look around and see a ukelele string on the floor. To pick it up use pickUp("ukelele string") or if you want to drop it use drop("ukelele string")
-//there is something wrong with the end brackets for console log ^^ (above) and for here wich is under this.
-here = ["ukelele string"];
+  console.log('You can say yes() or no()')
+  yes = function () {
+    document.getElementById('slothWakesUp').hidden=true;
+    document.getElementById('sloth').src = 'Sloth awake.jpg';
+    document.getElementById('WiseInfo').hidden=false;
+    document.getElementById('no').hidden=true;
+    //document.getElementarybyId('Sloth asleep.jpg').hidden=true;
+    delete no;
+  };
+  no = function () {
+    document.getElementById('slothWakesUp').hidden=false;
+    document.getElementById('no').hidden=false;
+    console.log('To pick it up use pickUp("ukelele string") or if you want to drop it use drop("ukelele string")');
+    here = ["ukelele string"];
+    delete yes;
+  };
 };
 // I have added an id to the img (see <img id="sloth" src="Sloth asleep.jpg" height="200"></img>)
 </script>

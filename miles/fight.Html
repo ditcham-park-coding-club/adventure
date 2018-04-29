@@ -13,15 +13,13 @@ bow or sword
 
 <script>
 
-console.log('you have ' + have)
-  console.log("useBow ");
-  console.log("useSword ");
+console.log("You can useBow() or useSword()");
 
 useBow=function () {
   have.push("Northan Ukelele String");
-  console.log('you have ' + have);
+  logHave();
   document.getElementById("useBow").hidden=false;
-  console.log("goHome");
+  console.log("You can goHome()");
   goHome= function () {
     go('../george/home.html');
   }
