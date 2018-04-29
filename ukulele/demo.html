@@ -1,0 +1,28 @@
+<html>
+<title>DEMO</title>
+<body style="font-family:verdana;">
+
+<h3>A demonstration of how to access a Password Field</h3>
+
+Password: <input type="password" id="myPsw" value="">
+
+
+
+<button onclick="myFunction()">Run >></button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myPsw").value;
+   if (x == 'UTD')
+   {
+   document.getElementById('demo').innerHTML='Welcome to the <i>members</i> page!!';
+   }
+
+}
+
+</script>
+
+</body>
+</html>

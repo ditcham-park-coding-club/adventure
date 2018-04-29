@@ -1,4 +1,5 @@
 <html>
+<title> Trombone Wanted By Dodgy Giraffe </title>
 <font face= "Jokerman" size= "15"</font>Infront of you is a giraffe. He wants a trombone.
 <p> </p>
    Don't give your golden trombone that you know nothing about to him.
@@ -8,37 +9,31 @@
 <font face= "Edwardian Script ITC" size="500" </font> manners maketh man!"
 <p> </p>
 <img src= "girraffe.jfif" alt "Giraffe sticking his tongue out" style= "width: 500px; height= 500px;">
-<p id="giraffewantstrombone" hidden="true">
-  <p></p>
-</p>
 <script src="../player.js"></script>
 <script>
-console.log('Hello Puny Human. i Have been watching you... (yes i am a stalker, deal with it.)');
-console.log('you can goEast or goSouthSouthWestAndALittleToTheRightAndForwardACoupleOfSteps or you can play my little game...')
+console.log('Hello Puny Human. I have been watching you... (yes i am a stalker, deal with it.)');
+console.log('you can goEast(), sayHello(), goSouthSouthWestAndALittleToTheRightAndForwardACoupleOfSteps() or you can play my little game...');
 goEast=function () {
-window.location='../ukulele/ukulelecloudclub.html';
-}
+  go('../ukulele/ukulelecloudclub.html');
+};
 goSouthSouthWestAndALittleToTheRightAndForwardACoupleOfSteps=function() {
-  window.location='../george/home.html'
-}
+  go('../george/home.html');
+};
 sayHello = function () {
   console.log("answer this riddle to get a trombone to give to the giraffe who will give you 2 ukulele strings. On the way to the water hole, a giraffe met six zebras,"+
-  " each zebra had three monkeys hanging from its neck and each monkey had two chicks perched on their tail and each chick had one parent following behind. How many animals were going to the water hole?")
-};
-sayOne=function () {
-  console.log("Yes you have succeeded! But the giraffe is in a bad mood today even though you gave him a trombone so he won't give you the ukulele"+
-  "strings you need but he will give you some useful advice. Penguins are worth listening to but they also have an unhealthy obsession with bowling balls. Goodbye puny human")
-
-};
-say144=function () {
-  console.log("WRONG! At this pace you will be stuck here forever you uneducated peasant.")
-};
-say145=function() {
-  console.log("no. I an not angry. I am just disappointed")
+  " each zebra had three monkeys hanging from its neck and each monkey had two chicks perched on their tail and each chick had one parent following behind. How many animals were going to the water hole? "+
+" (put your answer in brackets ie. say((your number)))")
+  say = function (number) {
+    if (number == 1) {
+      console.log("Yes you have succeeded! But the giraffe is in a bad mood today even though you gave him a trombone so he won't give you the ukulele"+
+      "strings you need but he will give you some useful advice. Penguins are worth listening to but they also have an unhealthy obsession with bowling balls. Goodbye puny human");
+    } else {
+      console.log("WRONG! At this pace you will be stuck here forever you uneducated peasant.");
+    };
+  };
 };
 sayBye=function() {
-  console.log("SHOO! You peasant scum!")
+  console.log("SHOO! You peasant scum!");
 };
-//it still doesnt say that you have the stoof from the other "webpages" please fix. :( (change the face if you have done it :))
 </script>
 </html>

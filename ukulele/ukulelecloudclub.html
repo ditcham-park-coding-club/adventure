@@ -1,28 +1,33 @@
 <html>
-<font face="Century">
+<title>Penguin anchovy problem</title>
+<font face="Century Gothic">
 
 
 
  There's a penguin wanting some anchovies to your left.
 <p> </p>
- Will you choose to give him your ukulele string so he can buy some?
+ Will you pickUp a ukulele string and give it to him so he can buy some?
  <p-> </p>
+<br>
+<br>
  Or will you choose to ignore him and be really mean?
 <p> </p>
+<br>
+<hr>
+<br>
  <img id="PENGUIN" src="penguin.jpg" width="500"></img>
  <p> </p>
 
 
 
-<p id="penguinSaysThanks" hidden ="true">
-    Aw, thanks. You shoudn't have. Youre way too kind.
-</p>
+
+
 <script src= "../player.js"> </script>
 <script>
 
 console.log('So what are you going to do?');
 console.log('You can ignoreThePenguin, or say("<something>") like "Hi".');
-console.log('Oh! And you can pickUp something, and there is a ukuele string on the floor.')
+
 
 ignoreThePenguin = function () {
   window.location = '../AbiJas/home.html';
@@ -31,28 +36,30 @@ ignoreThePenguin = function () {
 
 
 say = function (what) {
-  if (what == "Hi")
+  if
+  (what == "Hi") {
   document.getElementById('PENGUIN').src="penguin angry.jpg";
-  console.log("Look at the penguin now! After that you can: give a ukulele string you just recieved by typing respond('Here you go Mr Penguin')")
-  console.log("Or you could respond Bye bye")
-  if (what == "Bye bye")
+  console.log("Look at the penguin now! After that you can: give a ukulele string you just recieved by typing drop('ukulele string') that is, if you have one")
+  console.log("Or you could respond('Bye bye')") }
+  if (what == "Bye bye") {
   window.location = '../AbiJas/home.html';
+    }
 }
 
 
 pickUp = function (awesomeness) {
-  if (awesomeness == 'ukulele string')
+  if (awesomeness == 'ukulele string') {
     have.push(awesomeness);
+  }
+  else {
+  window.location = 'penguinpeople.html'
+  }
   console.log('You have: ' + have)
 
 }
 
-respond = function (what) {
-  if (what == 'Here you go Mr Penguin')
-  document.getElementById("penguinSaysThanks").hidden = false;
-  document.getElementById("PENGUIN").src="penguin.jpg";
-  console.log("Look at the penguin again and see what he says.")
-  console.log("You just made a grave mistake my friend. He will only spend the ukulele string on bowling balls!! Now you have to ignoreThePenguin and carry on your way.")
+respondByeBye = function () {
+  window.location = '../AbiJas/home.html'
 };
 
 

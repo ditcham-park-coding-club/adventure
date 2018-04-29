@@ -4,31 +4,31 @@ In front of you are three guinea-pigs.
 <b>They are cute.</b>
 </p>
 <p>
-They want to help you! But... there is a large MUSHROOM!!!!!! He wants your ukelele strings!
+They want to help you! But... there is a large MUSHROOM!!! He wants your ukelele strings!
 What can you do?
 You have to use the help from the guinea-pigs!
 But how do you earn their trust?
 </p>
 <p>
-You must find the magic carrot, the magic apple and the magic lettice leaf!
+You must find the magic carrot, the magic apple and the magic lettuce leaf!
 </p>
-<img src="P1020936 - 2.JPG" width="300"></img>
+<img src="P1020936 - 2.JPG" width="800"></img>
 <div id="guinea-pigsSayHi" hidden="true">
   <p>
     "Hello! I'm Nibbles, this is Fudge and this is Daisy!"
   </p>
   <p>
     "We know that you need to collect ukelele strings, so if you give us the
-    magic carrot, the magic apple and the magic lettice leaf
+    magic carrot, the magic apple and the magic lettuce leaf
     we will help you defeat the mushroom and give you two ukelele strings!"
   </p>
   <p style="background: grey;">
-    <img src="Apple.jpg" width="200"></img>
-    <img src="Lettuce.jpg" width="200"></img>
-    <img src="Carrot3.jpg" width="200"></img>
+    <img src="Apple.jpg" width="250"></img>
+    <img src="Lettuce.jpg" width="190"></img>
+    <img src="Carrot3.jpg" width="285"></img>
   </p>
 </div>
-<img src="MUSHROOM.jpg" width="500"></img>
+<img src="MUSHROOM.jpg" width="800"></img>
 <script src="../player.js"></script>
 <script>
 north = '../miles/north east 1.html';
@@ -41,22 +41,23 @@ home = '../george/home.html';
 console.log('Welcome to AbiJas home!!');
 console.log('You can go(north/east/west/south/home) or sayHi()');
 
+giveAll = function () {
+  if (have.indexOf('carrot') > -1 && have.indexOf('lettuce') > -1 && have.indexOf('apple') > -1) {
+    // now we want to drop the vegetables
+    drop('carrot');
+    drop('lettuce');
+    drop('apple');
 
-pickUp = function (what) {
-  if (have.indexOf(what) > -1) {
-    console.log('What ' + what + '?');
-  } else if (what=='carrot') {
-    have.push(what);
-  } else if (what=='apple') {
-    have.push(what);
-  } else if (what=='lettuce') {
-    have.push(what);
+    have.push('ukelele string');
+    have.push('ukelele string');
+    console.log('You have ' + have);
   }
-  console.log('You have: ' + have);
-};
+}
 
 sayHi = function () {
   document.getElementById('guinea-pigsSayHi').hidden = false
+  here = ['carrot', 'apple', 'lettuce'];
+  console.log('When you are ready, you can giveAll()');
 };
 </script>
-  </html>
+</html>
